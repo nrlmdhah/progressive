@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Progressive Security</title>
+     <link rel="stylesheet" href="progress.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="clients.html">Clients</a>
+                <a href="facilities.html">Facilities</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="nav-logo">
+                <img src="images/logo.png" alt="Progressive Security Logo">
+            </div>
+        </div>
+    </nav>
+
+<!-- ======================= About Section ======================= -->
+<section id="about">
+
+  <!-- This is the banner with the background image. -->
+  <div id="about-header" class="page-header-bg">
+    <div class="container">
+      <!-- This is the ONLY title for the section -->
+      <h2 class="page-title">About Our Company</h2>
+    </div>
+  </div>
+
+  <div class="about-section container">
+
+    <div class="about-main fade-in">
+      <div class="about-logo">
+        <img src="images/logo.png" alt="Company Logo">
+      </div>
+      <div class="about-text">
+        <h2>Company Overview</h2>
+        <p><strong>PROGRESSIVE SECURITY SERVICES SDN. BHD. (516727-A)</strong> is a private company specializing in security management and services for institutions and individuals. Incorporated in 1983, the company has grown to project a globalised image and professionalism, with a name change approved by the Home Ministry in May 2002.</p>
+      </div>
+    </div>
+
+    <div class="about-commitment fade-in delay">
+      <h2>Our Commitment</h2>
+      <p>Our Management Staffs are fully trained in security in addition to their experience and expertise, which are essential to enhance the support mechanism in this service-oriented organization.</p>
+      <p>Today, Progressive Security has become one of Malaysia’s leading security firms offering uncompromising security solutions to the ever-growing commercial establishment as well as government agencies. This Profile is designed primarily to illustrate our objectives in providing satisfactory security and investigative services to our clients, and reflects the high standard of professionalism and reliability which constitutes our motto for the benefit of our client.</p>
+    </div>
+
+    <h2 class="section-title">Our Core Values</h2>
+    <div class="core-values">
+      <div class="value-card fade-in">
+        <h3>Our Mission</h3>
+        <p>To provide the highest quality security services, ensuring peace of mind for our clients through professionalism, vigilance, and integrity.</p>
+      </div>
+      <div class="value-card fade-in delay">
+        <h3>Our Objective</h3>
+        <p>To be the leading security provider by investing in advanced technology, continuous training, and building long-term, trusted partnerships.</p>
+      </div>
+      <div class="value-card fade-in delay2">
+        <h3>Corporate Services</h3>
+        <p>We offer a comprehensive suite of security solutions including Manned Guarding, Mobile Patrols, CCTV Monitoring, and customized risk assessment.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="clients.html">Clients</a>
+                <a href="facilities.html">Facilities</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-right"><img src="images/logo.png" alt="Footer Logo"></div>
+        </div>
+        <div class="footer-bottom"><p>© 2024 PROGRESSIVE SECURITY SERVICES SDN. BHD. All Rights Reserved.</p></div>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <script>
+  const faders = document.querySelectorAll('.fade-in');
+
+  const appearOptions = {
+    threshold: 0.2,
+    rootMargin: "0px 0px -50px 0px"
+  };
+
+  const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.style.animationPlayState = 'running';
+      appearOnScroll.unobserve(entry.target);
+    });
+  }, appearOptions);
+
+  faders.forEach(fader => {
+    fader.style.animationPlayState = 'paused';
+    appearOnScroll.observe(fader);
+  });
+</script>
+
+</body>
+</html>
+
